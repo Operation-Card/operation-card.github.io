@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    
-  </head>
- 
-  
-  <body>
+
+<head>
+
+</head>
+
+
+<body>
     Nothing on this page?
-    
-    
-    
-    <div style="margin-bottom: 10000vh;" id="addMore"></div>
-      
-    
-    
+
+
+
+    <div style="height: 10000vh;" class="thing" id="addMore"></div>
+
+    <!-- Hope you didn't scroll for too long!  -->
+    <!-- For the next page, don't use the alphabet! -->
+
+    <!-- Here's your hint:
+        Use the next one in the sequence in the url
+
+        He, Li, B, N...
+        -->
+
     Not Here
     <script>
-      let i = 10000;
-       window.onscroll = function (e) {  
-         document.getElementById("addMore").style.marginBottom = i;
-         i+= 100;
-       }  
+        let i = 10000;
+        window.onscroll = function (e) {
+            console.log(i)
+            document.getElementById("addMore").style.height = `${i}vh`;
+            i += 10000;
+        }  
     </script>
-  </body>
- 
+
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .thing {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        }
+    </style>
+</body>
+
 
 </html>
